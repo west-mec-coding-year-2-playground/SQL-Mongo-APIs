@@ -1,0 +1,25 @@
+{
+  "name": "docker-node-mongo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node Browse.js && docker-compose up -d",
+    "mongo": "docker exec -it mongo mongo",
+    "list-containers": "docker ps",
+    "remove": "docker rm -f $(docker ps -a -q)",
+    "docker-stop": "docker stop $(docker ps -aq)"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "ejs": "^2.6.1",
+    "express": "^4.16.3",
+    "mongoose": "^5.4.17"
+  },
+  "devDependencies": {
+    "puppeteer": "^1.19.0"
+  }
+}
